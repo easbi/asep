@@ -75,7 +75,7 @@
                                     <th>PPL</th>                                   
                                     <th>Tgl Terima di TU</th>
                                     <th>Petugas Penerima</th>
-                                    <th>Status Penerimaan di Pengolahan</th>
+                                    <th>Status Penerimaan di Pengolahan1</th>
                                     <th>Jumlah UTP</th>
                                     <th>Jumlah DS.Utama</th>
                                     <th>Jumlah DS.Cadangan</th>
