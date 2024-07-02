@@ -60,8 +60,8 @@
                                         <input type="text" name="nama_responden" value="{{ $alurdokumen->nmkelurahan }} ({{ $alurdokumen->kode_kel }})" class="form-control" disabled>
                                     </div>
                                     <div class="form-group">
-                                        <strong>NBS (RT) :</strong>
-                                        <input type="text" name="nama_responden" value="RT {{ $alurdokumen->kode_nbs }}" class="form-control" disabled>
+                                        <strong>NBS :</strong>
+                                        <input type="text" name="nama_responden" value="{{ $alurdokumen->kode_nbs }}" class="form-control" disabled>
                                     </div>
                                     <br> 
                                     <div class="form-group">

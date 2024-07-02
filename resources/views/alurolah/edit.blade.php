@@ -65,64 +65,74 @@
                                         <input type="text" name="nama_responden" value="{{ $alurdokumen->nmkelurahan }} ({{ $alurdokumen->kode_kel }})" class="form-control" disabled>
                                     </div>
                                     <div class="form-group">
-                                        {{-- <strong>NBS (RT) :</strong> --}}
                                         <strong>NBS :</strong>
-
-                                        <input type="text" name="nama_responden" value="RT {{ $alurdokumen->kode_nbs }}" class="form-control" disabled>
+                                        <input type="text" name="nama_responden" value="{{ $alurdokumen->kode_nbs }}" class="form-control" disabled>
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <strong>Dokumen L1-UTP (hasil hitung ulang)</strong>
+                                        <strong>Dokumen UTP (hasil hitung ulang)</strong>
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L1-UTP yang diterima :</strong>
-                                        <input type="text" name="jml_terima_L1_UTP" class="form-control" value="{{ $alurdokumen->jml_terima_L1_UTP }}">
+                                        <strong>Jumlah dokumen UTP yang diterima :</strong>
+                                        <input type="text" name="jml_terima_UTP" class="form-control" value="{{ $alurdokumen->jml_terima_UTP }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L1-UTP yang dipakai :</strong>
-                                        <input type="text" name="jml_pakai_L1_UTP" class="form-control" value="{{ $alurdokumen->jml_pakai_L1_UTP }}">
+                                        <strong>Jumlah dokumen UTP yang dipakai :</strong>
+                                        <input type="text" name="jml_pakai_UTP" class="form-control" value="{{ $alurdokumen->jml_pakai_UTP }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L1-UTP yang tidak terpakai :</strong>
-                                        <input type="text" name="jml_tpakai_L1_UTP" class="form-control" value="{{ $alurdokumen->jml_tpakai_L1_UTP }}">
+                                        <strong>Jumlah dokumen UTP yang tidak terpakai :</strong>
+                                        <input type="text" name="jml_tpakai_UTP" class="form-control" value="{{ $alurdokumen->jml_tpakai_UTP }}">
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <strong>Dokumen L2-UTP (hasil hitung ulang)</strong>
+                                        <strong>Dokumen DS.Utama (hasil hitung ulang)</strong>
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang diterima :</strong>
-                                        <input type="text" name="jml_terima_L2_UTP" class="form-control" value="{{ $alurdokumen->jml_terima_L2_UTP }}">
+                                        <strong>Jumlah dokumen DS.Utama yang diterima :</strong>
+                                        <input type="text" name="jml_terima_ds_utama" class="form-control" value="{{ $alurdokumen->jml_terima_ds_utama }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang dipakai :</strong>
-                                        <input type="text" name="jml_pakai_L2_UTP" class="form-control" value="{{ $alurdokumen->jml_pakai_L2_UTP }}">
+                                        <strong>Jumlah dokumen DS.Utama yang dipakai :</strong>
+                                        <input type="text" name="jml_pakai_ds_utama" class="form-control" value="{{ $alurdokumen->jml_pakai_ds_utama }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang tidak terpakai :</strong>
-                                        <input type="text" name="jml_tpakai_L2_UTP" class="form-control" value="{{ $alurdokumen->jml_tpakai_L2_UTP }}">
+                                        <strong>Jumlah dokumen DS.Utama yang tidak terpakai :</strong>
+                                        <input type="text" name="jml_tpakai_ds_utama" class="form-control" value="{{ $alurdokumen->jml_tpakai_ds_utama }}">
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <strong>Dokumen Peta WS (hasil hitung ulang)</strong>
+                                        <strong>Dokumen DS.Cadangan (hasil hitung ulang)</strong>
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang diterima :</strong>
-                                        <input type="text" name="jml_terima_petaws" class="form-control" value="{{ $alurdokumen->jml_terima_petaws }}">
+                                        <strong>Jumlah dokumen DS.Cadangan yang diterima :</strong>
+                                        <input type="text" name="jml_terima_ds_cad" class="form-control" value="{{ $alurdokumen->jml_terima_ds_cad }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang dipakai :</strong>
-                                        <input type="text" name="jml_pakai_petaws" class="form-control" value="{{ $alurdokumen->jml_pakai_petaws }}">
+                                        <strong>Jumlah dokumen DS.Cadangan yang dipakai :</strong>
+                                        <input type="text" name="jml_pakai_ds_cad" class="form-control" value="{{ $alurdokumen->jml_pakai_ds_cad }}">
                                     </div>
                                     <div class="form-group">
-                                        <strong>Jumlah dokumen L2-UTP yang tidak terpakai :</strong>
-                                        <input type="text" name="jml_tpakai_petaws" class="form-control" value="{{ $alurdokumen->jml_tpakai_petaws }}">
+                                        <strong>Jumlah dokumen DS.Cadangan yang tidak terpakai :</strong>
+                                        <input type="text" name="jml_tpakai_ds_cad" class="form-control" value="{{ $alurdokumen->jml_tpakai_ds_cad }}">
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <strong>Jumlah Rumah Tangga Pertanian :</strong>
-                                        <input type="text" name="jumlah_ruta" class="form-control" value="{{ $alurdokumen->jumlah_ruta }}">
+                                        <strong>Dokumen Peta WN (hasil hitung ulang)</strong>
                                     </div>
+                                    <div class="form-group">
+                                        <strong>Jumlah dokumen Peta WB yang diterima :</strong>
+                                        <input type="text" name="jml_terima_petawb" class="form-control" value="{{ $alurdokumen->jml_terima_petawb }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <strong>Jumlah dokumen Peta WB yang dipakai :</strong>
+                                        <input type="text" name="jml_pakai_petawb" class="form-control" value="{{ $alurdokumen->jml_pakai_petawb }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <strong>Jumlah dokumen Peta WB yang tidak terpakai :</strong>
+                                        <input type="text" name="jml_tpakai_petawb" class="form-control" value="{{ $alurdokumen->jml_tpakai_petawb }}">
+                                    </div>
+                                    <br>
                                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                                     <script type="text/javascript">
                                         $( '#form-alokasi-doc-pengolahan' ).on('submit', function(e) {

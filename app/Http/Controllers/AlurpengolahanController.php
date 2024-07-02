@@ -32,7 +32,6 @@ class AlurpengolahanController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
              // dd($alurdokumen);
@@ -49,7 +48,6 @@ class AlurpengolahanController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
         return view('alurolah.index_sp', compact('alurdokumen'))->with('i', (request()->input('page', 1) - 1) * 5);
@@ -104,7 +102,6 @@ class AlurpengolahanController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
         // dd($alurdokumen);
@@ -121,7 +118,6 @@ class AlurpengolahanController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
         // dd($alurdokumen);
@@ -139,16 +135,18 @@ class AlurpengolahanController extends Controller
     {
         $alurdokumen = Alurpengolahan::find($id);
         if($alurdokumen) {
-            $alurdokumen->jml_terima_L1_UTP = $request->jml_terima_L1_UTP;
-            $alurdokumen->jml_terima_L2_UTP = $request->jml_terima_L2_UTP;
-            $alurdokumen->jml_terima_petaws = $request->jml_terima_petaws;
-            $alurdokumen->jml_pakai_L1_UTP = $request->jml_pakai_L1_UTP;
-            $alurdokumen->jml_pakai_L2_UTP = $request->jml_pakai_L2_UTP;
-            $alurdokumen->jml_pakai_petaws = $request->jml_pakai_petaws;
-            $alurdokumen->jml_tpakai_L1_UTP = $request->jml_tpakai_L1_UTP;
-            $alurdokumen->jml_tpakai_L2_UTP = $request->jml_tpakai_L2_UTP;
-            $alurdokumen->jml_tpakai_petaws = $request->jml_tpakai_petaws;            
-            $alurdokumen->jumlah_ruta = $request->jumlah_ruta;
+            $alurdokumen->jml_terima_UTP = $request->jml_terima_UTP;
+            $alurdokumen->jml_terima_ds_utama = $request->jml_terima_ds_utama;
+            $alurdokumen->jml_terima_ds_cad = $request->jml_terima_ds_cad;
+            $alurdokumen->jml_terima_petawb = $request->jml_terima_petawb;
+            $alurdokumen->jml_pakai_UTP = $request->jml_pakai_UTP;
+            $alurdokumen->jml_pakai_ds_utama = $request->jml_pakai_ds_utama;
+            $alurdokumen->jml_pakai_ds_cad = $request->jml_pakai_ds_cad;
+            $alurdokumen->jml_pakai_petawb = $request->jml_pakai_petawb;
+            $alurdokumen->jml_tpakai_UTP = $request->jml_tpakai_UTP;
+            $alurdokumen->jml_tpakai_ds_utama = $request->jml_tpakai_ds_utama;
+            $alurdokumen->jml_tpakai_ds_cad = $request->jml_tpakai_ds_cad;
+            $alurdokumen->jml_tpakai_petawb = $request->jml_tpakai_petawb; 
             $alurdokumen->petugas_batching = Auth::user()->id;           
             $alurdokumen->updated_at = now()->timestamp;
             $alurdokumen->save();
@@ -160,15 +158,18 @@ class AlurpengolahanController extends Controller
     {
         $alurdokumen = Alurpengolahan::find($id);
         if($alurdokumen) {
-            $alurdokumen->jml_terima_L1_UTP = $request->jml_terima_L1_UTP;
-            $alurdokumen->jml_terima_L2_UTP = $request->jml_terima_L2_UTP;
-            $alurdokumen->jml_terima_petaws = $request->jml_terima_petaws;
-            $alurdokumen->jml_pakai_L1_UTP = $request->jml_pakai_L1_UTP;
-            $alurdokumen->jml_pakai_L2_UTP = $request->jml_pakai_L2_UTP;
-            $alurdokumen->jml_pakai_petaws = $request->jml_pakai_petaws;
-            $alurdokumen->jml_tpakai_L1_UTP = $request->jml_tpakai_L1_UTP;
-            $alurdokumen->jml_tpakai_L2_UTP = $request->jml_tpakai_L2_UTP;
-            $alurdokumen->jml_tpakai_petaws = $request->jml_tpakai_petaws;
+            $alurdokumen->jml_terima_UTP = $request->jml_terima_UTP;
+            $alurdokumen->jml_terima_ds_utama = $request->jml_terima_ds_utama;
+            $alurdokumen->jml_terima_ds_cad = $request->jml_terima_ds_cad;
+            $alurdokumen->jml_terima_petawb = $request->jml_terima_petawb;
+            $alurdokumen->jml_pakai_UTP = $request->jml_pakai_UTP;
+            $alurdokumen->jml_pakai_ds_utama = $request->jml_pakai_ds_utama;
+            $alurdokumen->jml_pakai_ds_cad = $request->jml_pakai_ds_cad;
+            $alurdokumen->jml_pakai_petawb = $request->jml_pakai_petawb;
+            $alurdokumen->jml_tpakai_UTP = $request->jml_tpakai_UTP;
+            $alurdokumen->jml_tpakai_ds_utama = $request->jml_tpakai_ds_utama;
+            $alurdokumen->jml_tpakai_ds_cad = $request->jml_tpakai_ds_cad;
+            $alurdokumen->jml_tpakai_petawb = $request->jml_tpakai_petawb;
             $alurdokumen->tgl_terima = $request->tgl_terima;
             $alurdokumen->petugas_batching = 100;
             $alurdokumen->tgl_terima = date('Y-m-d');            

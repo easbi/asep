@@ -41,10 +41,10 @@ class DashboardController extends Controller
         $total_edcod = DB::table('transaksi')->whereNotNull('transaksi.petugas_edcod')->count();
         $total_entri = DB::table('transaksi')->whereNotNull('transaksi.petugas_entri')->count();
 
-        $total_L2 = DB::table('transaksi')->sum('jml_pakai_L2_UTP');
-        $total_L2_terima = DB::table('transaksi')->whereNotNull('transaksi.petugas_batching')->sum('jml_pakai_L2_UTP');
-        $total_L2_edcod = DB::table('transaksi')->whereNotNull('transaksi.petugas_edcod')->sum('jml_pakai_L2_UTP');
-        $total_L2_entri = DB::table('transaksi')->whereNotNull('transaksi.petugas_entri')->sum('jml_pakai_L2_UTP');
+        $total_L2 = DB::table('transaksi')->sum('jml_pakai_UTP');
+        $total_L2_terima = DB::table('transaksi')->whereNotNull('transaksi.petugas_batching')->sum('jml_pakai_UTP');
+        $total_L2_edcod = DB::table('transaksi')->whereNotNull('transaksi.petugas_edcod')->sum('jml_pakai_UTP');
+        $total_L2_entri = DB::table('transaksi')->whereNotNull('transaksi.petugas_entri')->sum('jml_pakai_UTP');
 
 
         return view('dashboard.all', compact('all', 'total_sls', 'total_penerimaan', 'total_edcod', 'total_entri', 'total_L2', 'total_L2_terima', 'total_L2_edcod', 'total_L2_entri'))->with('i', (request()->input('page', 1) - 1) * 5);

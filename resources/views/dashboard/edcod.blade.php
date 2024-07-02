@@ -72,16 +72,16 @@
                                     <th>Kota</th> -->
                                     <th>Kecamatan</th>                                    
                                     <th>Kelurahan</th>                                    
-                                    <th>NBS</th>                                    
-                                    {{-- <th>Koseka</th>                                     --}}
+                                    <th>NBS</th>
                                     <th>PML</th>                                    
                                     <th>PPL</th>                                   
                                     <th>Tgl Mulai Edcod</th>
                                     <th>Petugas Edcod</th>
                                     <th>Status Edcod</th>
-                                    <th>Jumlah L1</th>
-                                    <th>Jumlah L2</th>
-                                    <th>Jumlah Peta WS</th>
+                                    <th>Jumlah UTP</th>
+                                    <th>Jumlah DS.Utama</th>
+                                    <th>Jumlah DS.Cadangan</th>
+                                    <th>Jumlah Peta WB</th>
                             </tr>    
                             </thead>
                             <tbody>
@@ -107,15 +107,16 @@
                                     <td>{{ $al->tgl_mulai_edcod}}</td>
                                     <td>{{ $al->nama_petugas_edcod}}</td>
                                     <td>
-                                        @if ($al->tgl_selesai_edcod == '0000-00-00') 
+                                        @if ($al->tgl_selesai_edcod == '0000-00-00' || $al->tgl_selesai_edcod == null) 
                                             Belum 
                                         @else
                                             Sudah
                                         @endif
                                     </td>
-                                    <td>{{ $al->jml_terima_L1_UTP}}</td>                                    
-                                    <td>{{ $al->jml_terima_L2_UTP}}</td>                                    
-                                    <td>{{ $al->jml_terima_petaws}}</td>
+                                    <td>{{ $al->jml_terima_UTP}}</td>                                    
+                                    <td>{{ $al->jml_terima_ds_utama}}</td>                                    
+                                    <td>{{ $al->jml_terima_ds_cad}}</td>                                 
+                                    <td>{{ $al->jml_terima_petawb}}</td> 
                                 </tr>
                                 @endforeach
                             </tbody>

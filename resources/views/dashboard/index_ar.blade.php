@@ -68,20 +68,18 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">No</th>
-                                    <!-- <th>Prov</th>
-                                    <th>Kota</th> -->
                                     <th>Kecamatan</th>                                    
                                     <th>Kelurahan</th>                                    
-                                    <th>NBS</th>                                    
-                                    {{-- <th>Koseka</th>                                     --}}
+                                    <th>NBS</th>
                                     <th>PML</th>                                    
                                     <th>PPL</th>                                   
                                     <th>Tgl Terima di TU</th>
                                     <th>Petugas Penerima</th>
                                     <th>Status Penerimaan di Pengolahan</th>
-                                    <th>Jumlah L1</th>
-                                    <th>Jumlah L2</th>
-                                    <th>Jumlah Peta WS</th>
+                                    <th>Jumlah UTP</th>
+                                    <th>Jumlah DS.Utama</th>
+                                    <th>Jumlah DS.Cadangan</th>
+                                    <th>Jumlah Peta WB</th>
                                     <th>Aksi</th>
                             </tr>    
                             </thead>
@@ -89,8 +87,6 @@
                                 @foreach ($alurdokumen as $al)
                                 <tr>
                                     <td class="text-center">{{ ++$i }}</td>
-                                    <!-- <td>@if ($al->kode_prov = 13) Sumatera Barat (13) @endif</td>
-                                    <td>@if ($al->kode_kota = 74) Padang Panjang (74) @endif</td> -->
                                     <td>
                                         @if ($al->kode_kec == '010') 
                                             Padang Panjang Barat
@@ -99,10 +95,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $al->nmkelurahan}} ( {{ $al->kode_kel}})</td>
-                                    {{-- <td>RT {{ $al->kode_nbs}}</td> --}}
                                     <td>{{ $al->kode_nbs}}</td>
-
-                                    {{-- <td>{{ $al->nama_koseka}}</td> --}}
                                     <td>{{ $al->nama_pml}}</td>
                                     <td>{{ $al->nama_ppl}}</td>
                                     <td>{{ $al->tgl_terima}}</td>
@@ -114,9 +107,10 @@
                                             Sudah
                                         @endif
                                     </td>
-                                    <td>{{ $al->jml_terima_L1_UTP}}</td>                                    
-                                    <td>{{ $al->jml_terima_L2_UTP}}</td>                                    
-                                    <td>{{ $al->jml_terima_petaws}}</td>                                    
+                                    <td>{{ $al->jml_terima_UTP}}</td>                                    
+                                    <td>{{ $al->jml_terima_ds_utama}}</td>                                    
+                                    <td>{{ $al->jml_terima_ds_cad}}</td>                                 
+                                    <td>{{ $al->jml_terima_petawb}}</td>                                    
                                     <td><a class="btn btn-info btn-sm" href="{{ route('alurpengolahan.edit',$al->id) }}">Update</a></td>
                                 </tr>
                                 @endforeach

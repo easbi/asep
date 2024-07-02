@@ -76,7 +76,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $al->nmkelurahan}} ( {{ $al->kode_kel}})</td>
-                                    {{-- <td>RT {{ $al->kode_nbs}}</td> --}}
+                                    {{-- <td>{{ $al->kode_nbs}}</td> --}}
                                     <td>{{ $al->kode_nbs}}</td>
 
                                     <td class="text-center"> 

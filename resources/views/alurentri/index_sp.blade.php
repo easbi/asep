@@ -80,7 +80,7 @@
                                     <td>{{ $al->kode_nbs}}</td>
 
                                     <td class="text-center"> 
-                                        @if ($al->tgl_selesai_entri == '0000-00-00') 
+                                        @if ($al->tgl_selesai_entri == '0000-00-00' || $al->tgl_selesai_entri ==null) 
                                             <a class="btn btn-info btn-sm" href="{{ route('alurentri.editselfrekap',$al->id) }}">Belum Selesai</a>
                                         @else 
                                             {{$al->tgl_selesai_entri}}

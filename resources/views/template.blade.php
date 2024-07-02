@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ASET ST2023</title>
+    <title>ASEP</title>
 
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Google Font: Source Sans Pro -->
@@ -52,7 +52,7 @@
     <!-- Brand Logo -->
     <a href="{{ url('/penyimpanan')}}" class="brand-link">
       <img src="{{ asset('adminlte/dist/img/morin-logo.png') }}" alt="moRin Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">ASET</span>
+      <span class="brand-text font-weight-light">ASEP</span>
     </a>
 
     <!-- Sidebar -->

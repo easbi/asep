@@ -29,7 +29,6 @@ class AlurentriController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
              // dd($alurentri);
@@ -51,7 +50,6 @@ class AlurentriController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
         return view('alurentri.index_sp', compact('alurentri'))->with('i', (request()->input('page', 1) - 1) * 5);
@@ -105,7 +103,6 @@ class AlurentriController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
         return view('alurentri.edit', compact('alurdokumen'));
@@ -122,10 +119,8 @@ class AlurentriController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
-        // dd($alurdokumen);
         return view('alurentri.editselfrekap', compact('alurdokumen'));
     }
 

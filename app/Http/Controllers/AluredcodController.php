@@ -29,10 +29,9 @@ class AluredcodController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
-             // dd($aluredcod);
+             
         return view('aluredcod.index', compact('aluredcod'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -95,7 +94,6 @@ class AluredcodController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.name as nama_ppl', 'B.name as nama_pml')
              ->get();
         return view('aluredcod.index_sp', compact('alurdokumen'))->with('i', (request()->input('page', 1) - 1) * 5);
@@ -117,7 +115,6 @@ class AluredcodController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
         return view('aluredcod.edit', compact('alurdokumen'));
@@ -134,7 +131,6 @@ class AluredcodController extends Controller
                })
              ->join('m_petugas AS A', 'A.id', 'transaksi.ppl')
              ->join('m_petugas AS B', 'B.id', 'transaksi.pml')
-            //  ->join('m_petugas AS C', 'C.id', 'transaksi.koseka')
              ->select('transaksi.*', 'master_kel.nmkelurahan', 'A.nama as nama_ppl', 'B.nama as nama_pml')
             ->first();
         // dd($alurdokumen);
@@ -164,7 +160,6 @@ class AluredcodController extends Controller
     {
         $alurdokumen = Aluredcod::find($id);
         if($alurdokumen) {
-            $alurdokumen->jumlah_ruta = $request->jumlah_ruta;
             $alurdokumen->tgl_selesai_edcod = $request->tgl_selesai_edcod;          
             $alurdokumen->updated_at = now()->timestamp;
             $alurdokumen->save();

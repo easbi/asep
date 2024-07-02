@@ -61,7 +61,7 @@
                                         <input type="text" name="nama_responden" value="{{ $alurdokumen->nmkelurahan }} ({{ $alurdokumen->kode_kel }})" class="form-control" disabled>
                                     </div>
                                     <div class="form-group">
-                                        <strong>NBS (RT) :</strong>
+                                        <strong>NBS :</strong>
                                         <input type="text" name="nama_responden" value="RT {{ $alurdokumen->kode_nbs }}" class="form-control" disabled>
                                     </div>
                                     <br>
@@ -69,10 +69,6 @@
                                     <div class="form-group">
                                         <strong>Tgl Selesai Edcod :</strong>
                                         <input type="date" name="tgl_selesai_edcod" class="form-control" value="{{ $alurdokumen->tgl_selesai_edcod }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <strong>Jumlah Rumah Tangga Pertanian :</strong>
-                                        <input type="text" name="jumlah_ruta" class="form-control" value="{{ $alurdokumen->jumlah_ruta }}">
                                     </div>
                                     <br>
                                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

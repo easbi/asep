@@ -88,8 +88,7 @@
                                     <th>Kota</th> -->
                                     <th>Kecamatan</th>                                    
                                     <th>Kelurahan</th>                                    
-                                    <th>NBS</th>                                    
-                                    {{-- <th>Koseka</th>                                     --}}
+                                    <th>NBS</th>
                                     <th>PML</th>                                    
                                     <th>PPL</th>                                   
                                     <th>Tgl Terima di TU</th>
@@ -109,10 +108,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $al->nmkelurahan}} ( {{ $al->kode_kel}})</td>
-                                    {{-- <td>RT {{ $al->kode_nbs}}</td> --}}
                                     <td>{{ $al->kode_nbs}}</td>
-
-                                    {{-- <td>{{ $al->nama_koseka}}</td> --}}
                                     <td>{{ $al->nama_pml}}</td>
                                     <td>{{ $al->nama_ppl}}</td>
                                     <td>{{ $al->tgl_terima}}</td>
