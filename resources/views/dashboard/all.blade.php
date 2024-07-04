@@ -195,14 +195,14 @@
                                     </td>
                                     <td>{{ $al->nama_petugas_batching}}</td>
                                     <td>
-                                        @if ($al->tgl_terima == '0000-00-00' OR al->tgl_terima == null) 
+                                        @if ($al->tgl_terima == '0000-00-00' OR $al->tgl_terima == null) 
                                             Belum 
                                         @else
                                             Sudah
                                         @endif
                                     </td>
                                     <td>
-                                        @if ($al->tgl_mulai_edcod == '0000-00-00' OR al->tgl_mulai_edcod == null) 
+                                        @if ($al->tgl_mulai_edcod == '0000-00-00' OR $al->tgl_mulai_edcod == null) 
                                             - 
                                         @else
                                             {{$al->tgl_mulai_edcod}}
@@ -210,14 +210,14 @@
                                     </td>
                                     <td>{{ $al->nama_petugas_edcod}}</td>
                                     <td>
-                                        @if ($al->tgl_selesai_edcod == '0000-00-00' OR al->tgl_selesai_edcod == null) 
+                                        @if ($al->tgl_selesai_edcod == '0000-00-00' OR $al->tgl_selesai_edcod == null) 
                                             Belum 
                                         @else
                                             Sudah
                                         @endif
                                     </td>
                                     <td>
-                                        @if ($al->tgl_mulai_entri == '0000-00-00' OR al->tgl_mulai_entri == null) 
+                                        @if ($al->tgl_mulai_entri == '0000-00-00' OR $al->tgl_mulai_entri == null) 
                                             - 
                                         @else
                                             {{$al->tgl_mulai_entri}}
@@ -225,7 +225,7 @@
                                     </td>
                                     <td>{{ $al->nama_petugas_entri}}</td>
                                     <td>
-                                        @if ($al->tgl_selesai_entri == '0000-00-00' OR al->tgl_selesai_entri == null) 
+                                        @if ($al->tgl_selesai_entri == '0000-00-00' OR $al->tgl_selesai_entri == null) 
                                             Belum 
                                         @else
                                             Sudah
