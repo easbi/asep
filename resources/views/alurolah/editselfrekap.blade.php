@@ -73,6 +73,10 @@
                                     <div class="form-group">
                                         <strong>Kode Dokumen :</strong>
                                         <input type="text" name="nama_responden" value="1374{{$alurdokumen->kode_kec}}{{$alurdokumen->kode_kel}}{{$alurdokumen->kode_nbs}}" class="form-control" disabled>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <strong>Tanggal Penerimaan Dokumen :</strong>
+                                        <input type="date" name="tgl_terima" class="form-control" value="{{ $alurdokumen->tgl_terima }}">
                                     </div>
                                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                                     <script type="text/javascript">

@@ -147,7 +147,8 @@ class AlurpengolahanController extends Controller
             $alurdokumen->jml_tpakai_ds_utama = $request->jml_tpakai_ds_utama;
             $alurdokumen->jml_tpakai_ds_cad = $request->jml_tpakai_ds_cad;
             $alurdokumen->jml_tpakai_petawb = $request->jml_tpakai_petawb; 
-            $alurdokumen->petugas_batching = Auth::user()->id;           
+            $alurdokumen->petugas_batching = Auth::user()->id;             
+            $alurdokumen->tgl_terima = $request->tgl_terima;          
             $alurdokumen->updated_at = now()->timestamp;
             $alurdokumen->save();
         }
@@ -170,9 +171,8 @@ class AlurpengolahanController extends Controller
             $alurdokumen->jml_tpakai_ds_utama = $request->jml_tpakai_ds_utama;
             $alurdokumen->jml_tpakai_ds_cad = $request->jml_tpakai_ds_cad;
             $alurdokumen->jml_tpakai_petawb = $request->jml_tpakai_petawb;
-            $alurdokumen->tgl_terima = $request->tgl_terima;
-            $alurdokumen->petugas_batching = 100;
-            $alurdokumen->tgl_terima = date('Y-m-d');            
+            $alurdokumen->petugas_batching = Auth::user()->id;             
+            $alurdokumen->tgl_terima = $request->tgl_terima;           
             $alurdokumen->updated_at = now()->timestamp;
             $alurdokumen->save();
         }
