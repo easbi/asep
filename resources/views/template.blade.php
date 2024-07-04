@@ -158,34 +158,16 @@
             </ul>
           </li>       
 
-          <!-- <li class="nav-header">Dokumen di Box-ing Pasca Olah</li> 
-          <li class="nav-item">
-            <a href="{{ url('/alurbatch')}}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Dokumen Belum Box
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ url('/alurbatch/selfrekap')}}" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Dokumen Sudah Box
-              </p>
-            </a>
-          </li> -->
-          
-          
+         
           @if (Auth::check())
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-header">Dashboard</li>
           @endif          
           @endif
 
 
           @if (Auth::check())         
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-item">
             <a href="{{ url('/dashboard/all')}}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -198,7 +180,7 @@
           @endif
 
           @if (Auth::check())
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 36 OR Auth::user()->id == 32 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 36 OR Auth::user()->id == 32 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-item">
             <a href="{{ url('/dashboard/')}}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -211,7 +193,7 @@
           @endif
 
           @if (Auth::check())          
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-item">
             <a href="{{ url('/dashboard/edcod')}}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -224,7 +206,7 @@
           @endif
           
           @if (Auth::check())         
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-item">
             <a href="{{ url('/dashboard/entri')}}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -237,7 +219,7 @@
           @endif
 
           @if (Auth::check())         
-          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38)
+          @if(Auth::user()->id == 25 OR Auth::user()->id == 26 OR Auth::user()->id == 30 OR Auth::user()->id == 32 OR Auth::user()->id == 33 OR Auth::user()->id == 34 OR Auth::user()->id == 35 OR Auth::user()->id == 36 OR Auth::user()->id == 38 OR Auth::user()->id == 40 OR Auth::user()->id == 41)
           <li class="nav-item">
             <a href="{{ url('/dashboard/kinerjapp')}}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
