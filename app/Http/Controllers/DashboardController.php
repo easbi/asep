@@ -29,7 +29,6 @@ class DashboardController extends Controller
                })
              ->join('users AS A', 'A.id', 'transaksi.ppl')
              ->join('users AS B', 'B.id', 'transaksi.pml')
-            //  ->join('users AS C', 'C.id', 'transaksi.koseka')
              ->leftJoin('users AS D', 'D.id', 'transaksi.petugas_batching')
              ->leftJoin('users AS E', 'E.id', 'transaksi.petugas_edcod')
              ->leftJoin('users AS F', 'F.id', 'transaksi.petugas_entri')
@@ -77,7 +76,7 @@ class DashboardController extends Controller
             ->whereNotNull('transaksi.petugas_entri')
             ->join('users', 'users.id', '=', 'transaksi.petugas_entri')
             ->select('transaksi.petugas_entri', 'users.name',
-                      DB::raw("(sum(jml_terima_L2_UTP)) as total_dokumen"),
+                      DB::raw("(sum(jml_terima_UTP)) as total_dokumen"),
                       DB::raw("(count(tgl_mulai_entri)) as total_sls")
                   )
             ->groupBy('users.name','transaksi.petugas_entri')
@@ -87,7 +86,7 @@ class DashboardController extends Controller
             ->whereNotNull('transaksi.petugas_edcod')
             ->join('users', 'users.id', '=', 'transaksi.petugas_edcod')
             ->select('transaksi.petugas_edcod', 'users.name',
-                      DB::raw("(sum(jml_terima_L2_UTP)) as total_dokumen"),
+                      DB::raw("(sum(jml_terima_UTP)) as total_dokumen"),
                       DB::raw("(count(tgl_mulai_entri)) as total_sls")
                   )
             ->groupBy('users.name','transaksi.petugas_edcod')
@@ -97,7 +96,7 @@ class DashboardController extends Controller
             ->whereNotNull('transaksi.petugas_batching')
             ->join('users', 'users.id', '=', 'transaksi.petugas_batching')
             ->select('transaksi.petugas_batching', 'users.name',
-                      DB::raw("(sum(jml_terima_L2_UTP)) as total_dokumen"),
+                      DB::raw("(sum(jml_terima_UTP)) as total_dokumen"),
                       DB::raw("(count(tgl_mulai_entri)) as total_sls")
                   )
             ->groupBy('users.name','transaksi.petugas_batching')

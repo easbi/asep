@@ -9,7 +9,7 @@
 
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Monitoring Alur Pengolahan ST2023</h1>
+                        <h1 class="m-0">Monitoring Alur Pengolahan SEP-ST2023</h1>
                     </div>
                 </div> 
                 <!-- Small boxes (Stat box) -->
@@ -34,8 +34,7 @@
                     <div class="small-box bg-success">
                       <div class="inner">
                         <h3>{{$total_penerimaan}}</h3>
-
-                        {{-- <p>{{ round($total_penerimaan/$total_sls*100,2) }}% NBS Telah di Lakukan Batching Penerimaan</p> --}}
+                            <p>{{ round($total_penerimaan/$total_sls*100,2) }}% BS Telah di Lakukan Batching Penerimaan</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -48,8 +47,7 @@
                     <div class="small-box bg-warning">
                       <div class="inner">
                         <h3>{{$total_edcod}}</h3>
-
-                        {{-- <p>{{ round($total_edcod/$total_sls*100,2) }}% NBS Sudah di Edcod</p> --}}
+                            <p>{{ round($total_edcod/$total_sls*100,2) }}% BS Sudah di Edcod</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
@@ -62,8 +60,7 @@
                     <div class="small-box bg-danger">
                       <div class="inner">
                         <h3>{{$total_entri}}</h3>
-
-                        {{-- <p>{{ round($total_entri/$total_sls*100,2) }}% NBS Sudah/Sedang di Entri</p> --}}
+                            <p>{{ round($total_entri/$total_sls*100,2) }}% BS Sudah/Sedang di Entri</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
@@ -82,7 +79,7 @@
                       <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
                       <div class="info-box-content">
-                        <span class="info-box-text">Total Dokumen L2</span>
+                        <span class="info-box-text">Total Dokumen UTP</span>
                         <span class="info-box-number">
                           {{ $total_L2 }}
                         </span>
@@ -97,7 +94,7 @@
                       <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
                       <div class="info-box-content">
-                        <span class="info-box-text">Total Dokumen L2 Diterima</span>
+                        <span class="info-box-text">Total Dokumen UTP Diterima</span>
                         <span class="info-box-number">{{ $total_L2_terima }}</span>
                       </div>
                       <!-- /.info-box-content -->
@@ -114,7 +111,7 @@
                       <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
                       <div class="info-box-content">
-                        <span class="info-box-text">Total Dokumen L2 Sudah Di Edcod</span>
+                        <span class="info-box-text">Total Dokumen UTP Sudah Di Edcod</span>
                         <span class="info-box-number">{{ $total_L2_edcod }}</span>
                       </div>
                       <!-- /.info-box-content -->
@@ -127,7 +124,7 @@
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
                       <div class="info-box-content">
-                        <span class="info-box-text">Total Dokumen L2 Sudah/Sedang di Entri</span>
+                        <span class="info-box-text">Total Dokumen UTP Sudah/Sedang di Entri</span>
                         <span class="info-box-number">{{ $total_L2_entri }}</span>
                       </div>
                       <!-- /.info-box-content -->

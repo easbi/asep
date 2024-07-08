@@ -58,7 +58,7 @@
                                     <th class="text-center">No</th>
                                     <th>Petugas</th>   
                                     <th>Total NBS yang di Telah/Sedang Batching</th>                                 
-                                    <th>Total Dokumen L2 yang di Telah/Sedang Batching</th>
+                                    <th>Total Dokumen UTP yang di Telah/Sedang Batching</th>
                             </tr>    
                             </thead>
                             <tbody>
@@ -94,7 +94,7 @@
                                     <th class="text-center">No</th>
                                     <th>Petugas</th>   
                                     <th>Total NBS yang di Telah/Sedang Edcod</th>                                 
-                                    <th>Total Dokumen L2 yang di Telah/Sedang Edcod</th>
+                                    <th>Total Dokumen UTP yang di Telah/Sedang Edcod</th>
                             </tr>    
                             </thead>
                             <tbody>
@@ -130,7 +130,7 @@
                                     <th class="text-center">No</th>
                                     <th>Petugas</th>   
                                     <th>Total NBS yang di Telah/Sedang Entri</th>                                 
-                                    <th>Total Dokumen L2 yang di Telah/Sedang Entri</th>
+                                    <th>Total Dokumen UTP yang di Telah/Sedang Entri</th>
                             </tr>    
                             </thead>
                             <tbody>
