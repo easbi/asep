@@ -107,10 +107,12 @@
                                     <td>{{ $al->tgl_mulai_edcod}}</td>
                                     <td>{{ $al->nama_petugas_edcod}}</td>
                                     <td>
-                                        @if ($al->tgl_selesai_edcod == '0000-00-00' || $al->tgl_selesai_edcod == null) 
-                                            Belum 
-                                        @else
+                                        @if ($al->tgl_selesai_edcod == NULL && $al->petugas_edcod != NULL) 
+                                            Sedang Edcod 
+                                        @elseif ($al->tgl_selesai_edcod != '0000-00-00' && $al->petugas_edcod != NULL) 
                                             Sudah
+                                        @else
+                                            Belum
                                         @endif
                                     </td>
                                     <td>{{ $al->jml_terima_UTP}}</td>                                    

@@ -115,12 +115,12 @@
                                     <td>{{ $al->tgl_mulai_entri}}</td>
                                     <td>{{ $al->nama_petugas_entri}}</td>
                                     <td>
-                                        @if ($al->tgl_selesai_entri == '0000-00-00' && $al->petugas_entri == NULL) 
-                                            Belum 
-                                        @elseif ($al->tgl_selesai_entri == '0000-00-00' && $al->petugas_entri != NULL) 
-                                            Sedang di Entri 
-                                        @else
+                                        @if ($al->tgl_selesai_entri == NULL && $al->petugas_entri != NULL) 
+                                            Sedang Entri 
+                                        @elseif ($al->tgl_selesai_entri != '0000-00-00' && $al->petugas_entri != NULL) 
                                             Sudah
+                                        @else
+                                            Belum
                                         @endif
                                     </td>
                                     <td>{{ $al->jml_terima_UTP}}</td>                                    
