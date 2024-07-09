@@ -87,17 +87,19 @@ class DashboardController extends Controller
             ->join('users', 'users.id', '=', 'transaksi.petugas_edcod')
             ->select('transaksi.petugas_edcod', 'users.name',
                       DB::raw("(sum(jml_terima_UTP)) as total_dokumen"),
-                      DB::raw("(count(tgl_mulai_entri)) as total_sls")
+                      DB::raw("(count(tgl_mulai_edcod)) as total_sls")
                   )
             ->groupBy('users.name','transaksi.petugas_edcod')
             ->get();
+
+        // dd($rekap_p_edcod);
 
         $rekap_p_terima = DB::table('transaksi')
             ->whereNotNull('transaksi.petugas_batching')
             ->join('users', 'users.id', '=', 'transaksi.petugas_batching')
             ->select('transaksi.petugas_batching', 'users.name',
                       DB::raw("(sum(jml_terima_UTP)) as total_dokumen"),
-                      DB::raw("(count(tgl_mulai_entri)) as total_sls")
+                      DB::raw("(count(tgl_terima)) as total_sls")
                   )
             ->groupBy('users.name','transaksi.petugas_batching')
             ->get();
