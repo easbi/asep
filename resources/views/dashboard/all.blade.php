@@ -191,12 +191,16 @@
                                         @endif
                                     </td>
                                     <td>{{ $al->nama_petugas_batching}}</td>
-                                    <td>
-                                        @if ($al->tgl_terima == '0000-00-00' OR $al->tgl_terima == null) 
-                                            Belum 
+                                    <td style="
+                                        @if ($al->jml_terima_UTP < $al->jml_target_utp) 
+                                             background-color: red; color: white;  
+                                        @elseif ($al->jml_terima_UTP > $al->jml_target_utp) 
+                                             background-color: yellow; color: white; )
                                         @else
-                                            Sudah
+                                             background-color: green; color: white;
                                         @endif
+                                        ">
+                                        {{ $al->jml_terima_UTP}}
                                     </td>
                                     <td>
                                         @if ($al->tgl_mulai_edcod == '0000-00-00' OR $al->tgl_mulai_edcod == null) 
