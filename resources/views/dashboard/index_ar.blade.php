@@ -50,7 +50,7 @@
                       <div class="inner">
                         <h3>{{$total_sisa}}</h3>
 
-                        <p>{{$total_sisa/$total_sls*100}}% NBS Belum di Entri</p>
+                        <p>{{$total_sisa/$total_sls*100}}% NBS Belum di Terima</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
@@ -76,7 +76,8 @@
                                     <th>Tgl Terima di TU</th>
                                     <th>Petugas Penerima</th>
                                     <th>Status Penerimaan di Pengolahan1</th>
-                                    <th>Jumlah UTP</th>
+                                    <th>Jumlah UTP diterima</th>
+                                    <th>Jumlah UTP target</th>
                                     <th>Jumlah DS.Utama</th>
                                     <th>Jumlah DS.Cadangan</th>
                                     <th>Jumlah Peta WB</th>
@@ -107,7 +108,18 @@
                                             Sudah
                                         @endif
                                     </td>
-                                    <td>{{ $al->jml_terima_UTP}}</td>                                    
+                                    <td style="
+                                        @if ($al->jml_terima_UTP < $al->jml_target_utp) 
+                                             background-color: red; color: white;  
+                                        @elseif ($al->jml_terima_UTP > $al->jml_target_utp) 
+                                             background-color: yellow; color: white; )
+                                        @else
+                                             background-color: green; color: white;
+                                        @endif
+                                        ">
+                                        {{ $al->jml_terima_UTP}}
+                                    </td>
+                                    <td>{{ $al->jml_target_utp}}</td>                                     
                                     <td>{{ $al->jml_terima_ds_utama}}</td>                                    
                                     <td>{{ $al->jml_terima_ds_cad}}</td>                                 
                                     <td>{{ $al->jml_terima_petawb}}</td>                                    
