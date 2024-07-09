@@ -153,7 +153,7 @@
                                     <th>Status Batching</th>                                  
                                     <th>Tgl Mulai Edcod</th>
                                     <th>Petugas Edcod</th>
-                                    <th>Status Edcod</th>                                  
+                                    <th>Jumlah UTP Edcod</th>                                  
                                     <th>Tgl Mulai Entri</th>
                                     <th>Petugas Entri</th>
                                     <th>Status Entri</th>
