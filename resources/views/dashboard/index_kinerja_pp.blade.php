@@ -8,7 +8,7 @@
             <div class="container-fluid">                
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Monitoring Kinerja Petugas Pengolahan ST2023</h1>
+                        <h1 class="m-0">Monitoring Kinerja Petugas Pengolahan SEP 2024</h1>
                     </div>
                 </div>                 
             </div><!-- /.container-fluid -->
@@ -44,7 +44,7 @@
                     <div class="container-fluid">                
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Kinerja Petugas Pengolahan Receiving Batching ST2023</h1>
+                                <h1 class="m-0">Kinerja Petugas Pengolahan Receiving Batching SEP 2024</h1>
                             </div>
                         </div>                 
                     </div><!-- /.container-fluid -->
@@ -80,7 +80,7 @@
                     <div class="container-fluid">                
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Kinerja Petugas Pengolahan Editing Coding ST2023</h1>
+                                <h1 class="m-0">Kinerja Petugas Pengolahan Editing Coding SEP 2024</h1>
                             </div>
                         </div>                 
                     </div><!-- /.container-fluid -->

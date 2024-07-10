@@ -10,7 +10,7 @@
 
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Monitoring Alur Dokumen Pengolahan ST2023</h1>
+                        <h1 class="m-0">Monitoring Alur Dokumen Pengolahan SEP 2024</h1>
                     </div>
                 </div> 
                 <!-- Small boxes (Stat box) -->
@@ -26,7 +26,7 @@
                       <div class="icon">
                         <i class="ion ion-bag"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Target 2023 : 0 NBS</a>
+                      <a href="#" class="small-box-footer">Target 2024 : 0 NBS</a>
                     </div>
                   </div>
                   <!-- ./col -->

@@ -10,7 +10,7 @@
 
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Monitoring Alur Editing Coding (Edcod) Pengolahan ST2023</h1>
+                        <h1 class="m-0">Monitoring Alur Editing Coding (Edcod) Pengolahan SEP 2024</h1>
                     </div>
                 </div> 
                 <!-- Small boxes (Stat box) -->
